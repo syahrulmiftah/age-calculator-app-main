@@ -1,0 +1,294 @@
+/* Import declaration */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+/* Example usage */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 800;
+}
+
+/* Define CSS custom properties */
+:root {
+  /* Primary colors */
+  --primary-100: hsl(259, 100%, 65%);
+  --primary-200: hsl(259, 100%, 55%);
+  --primary-300: hsl(259, 100%, 45%);
+  /* Secondary colors */
+  --secondary-100: hsl(0, 100%, 67%);
+  --secondary-200: hsl(0, 100%, 57%);
+  --secondary-300: hsl(0, 100%, 47%);
+  /* Neutral colors */
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-offwhite: hsl(0, 0%, 94%);
+  --neutral-lightgrey: hsl(0, 0%, 86%);
+  --neutral-smokeygrey: hsl(0, 1%, 44%);
+  --neutral-offblack: hsl(0, 0%, 8%);
+}
+
+/* Example usage */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--neutral-offwhite);
+  color: var(--neutral-offblack);
+}
+
+h1 {
+  color: var(--primary-100);
+}
+
+p {
+  color: var(--secondary-100);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles (bullets, numbering) */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* Remove default quote styles */
+blockquote,
+q {
+  quotes: none;
+}
+
+/* Remove default quote styles for Webkit browsers */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Remove default heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset links styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Reset form element styles */
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  background-color: var(--neutral-lightgrey);
+  height: 100vh;
+}
+
+label {
+  font-size: 0.625rem;
+  font-weight: bold;
+}
+
+.container {
+  background-color: var(--neutral-offwhite);
+  padding: 2rem 1.5rem;
+  border-radius: 1.125rem;
+  border-bottom-right-radius: 5rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flex__group {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 0.375rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--neutral-smokeygrey);
+  overflow: hidden;
+}
+
+.flex__group input {
+  border: 1px solid var(--neutral-lightgrey);
+  border-radius: 0.45rem;
+  padding-left: 10px;
+  width: 75px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.line__break {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.straight__line {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: var(--neutral-lightgrey);
+}
+
+.arrow {
+  background-color: var(--primary-100);
+  border-radius: 9999px;
+  height: 50px;
+  padding: 15px;
+  z-index: 10;
+}
+
+.arrow:hover {
+  background-color: var(--neutral-offblack);
+  cursor: pointer;
+}
+
+.result li {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 3rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.result .num {
+  color: var(--primary-100);
+}
+
+.result .str {
+  color: var(--neutral-offblack);
+}
+
+.error-message {
+  letter-spacing: normal;
+  font-style: italic;
+  text-transform: none;
+  font-size: 0.5rem;
+}
+
+.flex__group .error {
+  border: 1px solid red;
+}
+
+.flex__group > label.error {
+  border: none;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 1000px;
+    padding-left: 40px;
+  }
+  .result li {
+    font-size: 5rem;
+  }
+
+  .result {
+    display: grid;
+    gap: 0;
+    line-height: 5.5rem;
+  }
+
+  .line__break {
+    justify-content: right;
+  }
+
+  .arrow {
+    height: 75px;
+    padding: 20px;
+  }
+
+  .straight__line {
+    top: 0;
+  }
+
+  .flex__group {
+    padding-right: 10vw;
+  }
+
+  .flex__group input {
+    width: 130px;
+    height: 56px;
+    font-size: 25px;
+  }
+
+  .flex__group {
+    grid-column-gap: 1.875rem;
+  }
+
+  label {
+    font-size: 0.75rem;
+  }
+
+  .straight__line {
+    top: 50%;
+    margin: 0;
+  }
+
+  .error-message {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <form class="flex__group" novalidate>
+        <label id="label-day" for="day">Day</label>
+        <label id="label-month" for="month">Month</label>
+        <label id="label-year" for="year">Year</label>
+        <input type="text" id="day" placeholder="DD" />
+        <input type="text" id="month" placeholder="MM" required />
+        <input type="text" id="year" placeholder="YYYY" required />
+        <p class="error-message" id="days"></p>
+        <p class="error-message" id="months"></p>
+        <p class="error-message" id="years"></p>
+      </form>
+      <div class="line__break">
+        <hr class="straight__line" />
+        <img
+          class="arrow"
+          src="/assets/images/icon-arrow.svg"
+          id="calculate-button"
+          alt=""
+          srcset=""
+        />
+      </div>
+      <div class="calculation__result">
+        <ul class="result">
+          <li>
+            <p class="num" id="result-years">--</p>
+            <p class="str">years</p>
+          </li>
+          <li>
+            <p class="num" id="result-months">--</p>
+            <p class="str">months</p>
+          </li>
+          <li>
+            <p class="num" id="result-days">--</p>
+            <p class="str">days</p>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  </body>
+</html>
